@@ -70,7 +70,7 @@ const MessagesLink: MessageType[] = [
 ];
 
 //   Notification Data
-import { Calendar, Settings, LucideIcon, Command, LayoutPanelLeft, Files } from 'lucide-react';
+import { AlertTriangle, Settings, LucideIcon, BrainCircuit, Thermometer, Factory } from 'lucide-react';
 
 interface NotificationType {
   title: string;
@@ -83,64 +83,52 @@ interface NotificationType {
 }
 
 const Notification: NotificationType[] = [
-
   {
-    icon: Calendar,
-    bgcolor: "bg-chart-4/10",
-    color: 'text-chart-4',
-    title: "Event Today",
-    subtitle: "Just a reminder that you have event",
-    time: "9:15 AM",
+    icon: AlertTriangle,
+    bgcolor: "bg-red-500/10",
+    color: 'text-red-400',
+    title: "용접기 과열 감지",
+    subtitle: "로봇 용접기 #1 온도 임계치 초과",
+    time: "09:42",
     isRead: false,
   },
   {
-    icon: Settings,
-    bgcolor: "bg-chart-1/10",
-    color: 'text-chart-1',
-    title: "Settings",
-    subtitle: "You can customize this template as you want",
-    time: "4:36 PM",
+    icon: Thermometer,
+    bgcolor: "bg-amber-500/10",
+    color: 'text-amber-400',
+    title: "프레스 온도 상승",
+    subtitle: "유압 프레스 #2 주의 구간 진입",
+    time: "07:50",
     isRead: false,
   },
   {
-    icon: LayoutPanelLeft,
-    bgcolor: "bg-chart-2/10 ",
-    color: 'text-chart-2',
-    title: "Launch Admin",
-    subtitle: "Just see the my new admin!",
-    time: "9:30 AM",
+    icon: BrainCircuit,
+    bgcolor: "bg-sky-500/10",
+    color: 'text-sky-400',
+    title: "모델 배포 실패",
+    subtitle: "Paint Thickness Estimator 엣지 배포 실패",
+    time: "어제",
     isRead: false,
   },
   {
-    icon: Command,
+    icon: Factory,
     bgcolor: "bg-primary/5",
     color: 'text-primary',
-    title: "Launch Admin",
-    subtitle: "Just see the my new admin!",
-    time: "9:30 AM",
-    isRead: false,
-  },
-  {
-    icon: Calendar,
-    bgcolor: "bg-chart-5/10 ",
-    color: 'text-chart-5',
-    title: "Event Today",
-    subtitle: "Just a reminder that you have event",
-    time: "9:15 AM",
-    isRead: false,
+    title: "학습 작업 완료",
+    subtitle: "Assembly Vision Model 학습 완료",
+    time: "11/04",
+    isRead: true,
   },
   {
     icon: Settings,
     bgcolor: "bg-chart-1/10",
     color: 'text-chart-1',
-    title: "Settings",
-    subtitle: "You can customize this template as you want",
-    time: "4:36 PM",
+    title: "정기 점검 예정",
+    subtitle: "유압 프레스 #1 점검 D-3",
+    time: "11/08",
     isRead: true,
   },
 ];
-
-
 
 interface profileType {
   avatar: LucideIcon;
@@ -149,36 +137,36 @@ interface profileType {
   badge: boolean;
 }
 
-import { Home, User, Keyboard } from 'lucide-react';
+import { User, Bell, LayoutDashboard } from 'lucide-react';
 
 const profileDD: profileType[] = [
   {
-    avatar: Home,
-    title: 'Home',
+    avatar: LayoutDashboard,
+    title: '통합 대시보드',
     href: '/',
+    badge: false
+  },
+  {
+    avatar: Bell,
+    title: '알림 관리',
+    href: '/alerts',
+    badge: true
+  },
+  {
+    avatar: Factory,
+    title: '설비 관리',
+    href: '/equipment',
     badge: false
   },
   {
     avatar: User,
-    title: 'Profile',
-    href: '/',
-    badge: false
-  },
-  {
-    avatar: Files,
-    title: 'Invoice',
-    href: '/',
-    badge: true
-  },
-  {
-    avatar: Keyboard,
-    title: 'Subscription',
+    title: '운영자 프로필',
     href: '/',
     badge: false
   },
   {
     avatar: Settings,
-    title: 'Account Settings',
+    title: '계정 설정',
     href: '/',
     badge: false
   }

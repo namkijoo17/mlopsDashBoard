@@ -15,7 +15,10 @@ export default function NavCollapse({ menu, className }: NavCollapseProps) {
   const isCollapse = state === "collapsed";
 
   const isActiveRoute = (item: ChildItem): boolean => {
-    if (item.url && pathname === item.url) return true;
+    if (item.url) {
+      if (item.url === '/') return pathname === '/'
+      if (pathname === item.url || pathname.startsWith(`${item.url}/`)) return true
+    }
     if (item.items) return item.items.some(isActiveRoute);
     return false;
   };

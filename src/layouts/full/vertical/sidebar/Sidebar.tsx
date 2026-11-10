@@ -29,7 +29,7 @@ const SidebarLayout = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
         >
             <SidebarHeader className="p-3 group-data-[state=collapsed]:px-2.5 flex flex-row items-center justify-between border-b border-border">
                 <FullLogo />
-                <Badge className="group-data-[state=collapsed]:hidden" variant={"secondary"}>V.1.0</Badge>
+                <Badge className="group-data-[state=collapsed]:hidden" variant={"secondary"}>MLOps</Badge>
             </SidebarHeader>
 
             <SidebarContent>

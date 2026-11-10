@@ -15,7 +15,7 @@ async function deferRender() {
 
 deferRender().then(() => {
   createRoot(document.getElementById('root')!).render(
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Suspense fallback={<Spinner />}>
         <App />
       </Suspense>
